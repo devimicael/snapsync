@@ -1,0 +1,143 @@
+#snapsync-body {
+    font-family: "Poppins";
+    background: var(--color8);
+}
+
+#snapsync-header {
+    height: 200px;
+    position: relative;
+}
+
+#snapsync-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#header-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#header-text {
+    font-family: "Montserrat";
+    color: var(--color8);
+    text-transform: uppercase;
+    font-weight: 400;
+    position: absolute;
+    display: inline-block;
+    font-size: 3.4rem;
+    top: 50px;
+    left: 500px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#header-text::after {
+    content: "sincronize seu mundo com snapsync.";
+    position: absolute;
+    font-size: 12px;
+    width: 100%;
+    top: 60px;
+    left: 30px;
+}
+
+#main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem;
+    box-shadow: none;
+    text-align: left;
+}
+
+#main-heading {
+    background-image: linear-gradient(
+        to right,
+        var(--color2) 5%,
+        var(--color3) 20%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+#main-description {
+    color: var(--color9);
+    font-style: italic;
+    margin: 5px 0;
+}
+
+#connect-link {
+    color: var(--color8);
+    background: linear-gradient(
+        to right,
+        var(--color2),
+        var(--color3)
+    );
+    padding: 10px 20px;
+    border-radius: 3.2px;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#connect-link:hover {
+    background: linear-gradient(
+        to right,
+        var(--color3),
+        var(--color2)
+    );
+    color: var(--color1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+#snapsync-footer {
+    color: var(--color9);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 5px;
+}
+
+@media (max-width: 800px) {
+    #header-text {
+        left: 252px;
+        top: 60px;
+    }
+    #header-text::after {
+        left: 52px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #main-container {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    #main-heading {
+        font-size: 1.8rem;
+        background-image: linear-gradient(
+            to right,
+            var(--color2),
+            var(--color3)
+        );
+    }
+
+    #header-text {
+        left: 120px;
+        top: 60px;
+        font-size: 2.2rem;
+    }
+
+    #header-text::after {
+        left: 20px;
+        top: 41px;
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Registro | Snap Sync</title>
+</head>
+<body id="snapsync-signup">
+    <div class="container-signup" id="signup-container">
+        <div class="title" id="signup-title">Registro</div>
+        <div class="content-signup" id="signup-content">
+            <form id="signup-form" method="post" action="../../src/js/signup.js">
+                <div class="user-details" id="user-details">
+                    <div class="input-box" id="input-box-fullname">
+                        <span class="details" id="fullname-details">Nome Completo</span>
+                        <input type="text" name="full_name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="input-box" id="input-box-username">
+                        <span class="details" id="username-details">Nome de Usuário</span>
+                        <input type="text" name="user_name" placeholder="Digite seu nome de usuário" required>
+                    </div>
+                    <div class="input-box" id="input-box-email">
+                        <span class="details" id="email-details">Email</span>
+                        <input type="email" name="user_mail" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="input-box" id="input-box-phone">
+                        <span class="details" id="phone-details">Número de Telefone</span>
+                        <input type="text" name="user_phone" placeholder="Digite seu número" required>
+                    </div>
+                    <div class="input-box" id="input-box-password">
+                        <span class="details" id="password-details">Senha</span>
+                        <input type="password" name="user_password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="input-box" id="input-box-confirm-password">
+                        <span class="details" id="confirm-password-details">Confirmar Senha</span>
+                        <input type="password" placeholder="Confirme sua senha" required>
+                    </div>
+
+                </div>
+                <div class="button" id="signup-button">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+        </div>
+        <div class="login-link" id="login-link">
+            <p>Já é cadastrado? <a href="./login.html">Ir para o login</a></p>
+        </div>
+    </div>
+    <script type="module" src="../../index.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+#snapsync-signup {
+    background: linear-gradient(135deg, var(--color1), var(--color2));
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s linear infinite;
+    transition: background 0.5s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    color: var(--color9);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#signup-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--color8);
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#signup-title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+#signup-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--color2), var(--color3));
+}
+
+#signup-content form #user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+#signup-content form .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+#signup-content form .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+#user-details .input-box input:focus,
+#user-details .input-box input:valid {
+    border-color: var(--color3);
+}
+
+#signup-content form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#signup-content form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+#signup-content form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#signup-content form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: var(--color6);
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+    background: var(--color3);
+    border-color: var(--color6);
+}
+
+#signup-content form input[type="radio"] {
+    display: none;
+}
+
+#signup-content form .button {
+    height: 45px;
+    margin: 35px 0;
+}
+
+#signup-content form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, var(--color2), var(--color3));
+}
+
+#signup-content form .button input:hover {
+    background: linear-gradient(-135deg, var(--color2), var(--color3));
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
