@@ -1,6 +1,5 @@
 import sequelize from "../../setup.js";
 import {DataTypes } from "sequelize";
-import Post from "./post.js";
 
 const User = sequelize.define("Clients", {
     id: {
@@ -54,5 +53,4 @@ const User = sequelize.define("Clients", {
     }
 });
 
-User.hasMany(Post, { foreignKey: 'post_userID' });
 export default User;

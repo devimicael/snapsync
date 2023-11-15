@@ -22,7 +22,6 @@ export const createPost = async (req, res) => {
             });
         }
         await post.setClient(user);
-        
         res.status(200).json(post);
     }catch(err){
         console.error(err);
@@ -38,5 +37,42 @@ export const getAllPosts = async (req, res) => {
     }catch(err){
         console.error(err);
         res.status(500).json({error: "erro eo tentar obter os posts"});
+    }
+};
+
+export const updatePost = async(req, res) => {
+    try {
+        const {id} = req.params;
+        const {
+            post_title,
+            post_description,
+            post_imgURL
+        } = req.body;
+
+        const post = await Post.findByPk(id);
+        if(!post) return res.status(404).json({error: "Post não encontrado."});
+
+        post.post_title = post_title || post.post_title;
+        post.post_description = post_description || post.post_description;
+        post.post_imgURL = post_imgURL || post.post_imgURL;
+
+        await post.save();
+        res.status(200).json(post);
+    }catch(err){
+        console.error(err);
+        res.status(500).json({error: "Erro ao atualizar o post."});
+    }
+};
+
+export const deletePost = async(req, res) => {
+    try {
+        const {id} = req.params;
+        const post = await Post.findByPk(id);
+        if(!post) return res.status(404).json({error: "Post não encontrado"});
+        await post.destroy();
+        res.status(204).end();
+    }catch(err){
+        console.error(err);
+        res.status(500).json({error: "Erro ao tentar excluir post."});
     }
 };

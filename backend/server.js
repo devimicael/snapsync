@@ -11,7 +11,7 @@ import postRouter from "./src/routers/post.router.js";
 
 import { authenticate } from "./src/middlewares/authenticate.js";
 
-app.get("/", authenticate,(req, res) => {
+app.get("/", authenticate, (req, res) => {
     res.status(200).json({message: "sucesso."});
 });
 
